@@ -15,3 +15,5 @@
   git reset --hard 1094a
   gir reflog
   
+7.git status
+8.git diff HEAD -- readme.txt
