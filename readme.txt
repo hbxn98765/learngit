@@ -17,3 +17,11 @@
   
 7.git status
 8.git diff HEAD -- readme.txt
+
+9.git checkout -- file #--很重要，回到最近一次git commit 或git add的状态。
+
+10.git rm
+   git commit  #git checkout -- text.txt
+   
+11.git remote add origin git@github.com:hbxn98765/learngit.git
+                 
