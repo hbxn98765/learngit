@@ -10,3 +10,5 @@
   git add readme.txt readme2.txt readme3.txt
   git comit -m "write a readme.txt file" #告诉git,把文件提交到仓库
   
+6.git log //显示日志
+  
