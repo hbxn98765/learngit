@@ -1,0 +1,30 @@
+gentoo
+
+一、光盘ISO启动
+F1、F2，硬盘启动
+
+开启SSH，windows系统远程（putty），
+开启SSH: /etc/init.d/sshd start
+passwd
+useradd -m -G users zjp
+passwd zjp
+
+
+分区：
+fdisk -l
+
+mkfs.ext4 /dev/sda1
+mkswap /dev/sda3 #格式化swap
+swapon /dev/sda3 #挂载swap
+
+
+mount /dev/sda2 /mnt/gentoo #你分的/
+mkdir /mnt/gentoo/boot
+mount /dev/sda1 /mnt/gentoo/boot #你分的准备挂载boot的分区
+
+cd /mnt/cdrom
+cp *.tar.bz2 /mnt/gentoo #复制两个文件到/mnt/gentoo下
+cd /mnt/gentoo #gentoo目录下
+tar xvjpf stage3-*.tar.bz2 #解压stage3
+
+tar xvjf /mnt/gentoo/portage-*.tar.bz2 -C /mnt/gentoo/usr #解压portage到/mnt/gentoo/usr
