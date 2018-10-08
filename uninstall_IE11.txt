@@ -1,0 +1,25 @@
+请尝试以下操作步骤来卸载Internet Explorer 11.
+
+1、单击“开始”按钮，在搜索框中输入“程序和功能”，然后选择“查看已安装的更新”。 
+
+2、在“卸载更新”下，向下滚动到“Microsoft Windows”部分。 
+
+3、右键单击“IE11”，单击“卸载”，然后在出现提示时单击“是”。 
+
+4、单击“立即重新启动”后会恢复到以前的IE浏览器版本。 
+
+
+
+如以上操作无效的话，请尝试使用命令删除。
+
+1.依次点击“开始->所有程序->附件”，右键点击“命令行提示符”，选择“以管理员身份运行”。
+
+2.FORFILES /P %WINDIR%\servicing\Packages /M Microsoft-Windows-InternetExplorer-*11.*.mum /c "cmd /c echo Uninstalling package @fname && start /w pkgmgr /up:@fname /norestart" 
+
+3.注意：运行过程中可能会出现0x80040005或0x80070005的报错，我们可以点击“确定”并忽略它。
+
+4.(稍等几分钟)命令运行完成后：请重启计算机并查看是否完成卸载。
+
+
+
+感谢使用微软产品。
