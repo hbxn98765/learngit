@@ -37,7 +37,27 @@
   cd learngit
   pwd (show dir)(ls -ah)
 
-4.git init
+4.git init   初始化仓库
+  git add    添加文件到暂存区
+  git commit 将暂存区内容添加到仓库中
+  git rm     删除工作区文件
+  git reset  回退版本
+  git mv     移动或重命名工作区文件
+
+  远程操作
+  git remote 远程仓库操作
+  git fetch  从远程获取代码库
+  git pull   下载远程代码并合并
+  git push   上传远程代码并合并
+
+  分支管理
+  git branch (branchname)   创建分支
+  git checkout (branchname) 切换分支
+  git merge                 合并分支
+
+  
+
+
 
 5.add file note   (utf-8 bom)
   git add readme.txt readme2.txt readme3.txt
@@ -47,6 +67,13 @@
   git reset --hard Head^
   git reset --hard 1094a
   gir reflog
+  
+  git reset HEAD 暂存区的目录树被重写,被master分支替换，但工作区不受影响
+  git rm --cached <file> 会直接从暂存区删除文件，工作区不做改变
+
+  git checkout .或者git checkout --<file> 会用暂存区全部或指定的文件替换工作区的文件
+  git checkout HEAD .或者 git checkout HEAD <file>会用分支中的全部或部分文件替换工作区。 
+
   
 7.git status
 8.git diff HEAD -- readme.txt
