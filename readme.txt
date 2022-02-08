@@ -1,3 +1,4 @@
+# reame
 ﻿1.install git
   git的工作需要调用 curl,zlib,openssl,expat,libiconv等库的代码，需要先安装这些依赖工具。
    apt-get install libcur14-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
